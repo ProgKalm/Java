@@ -4,6 +4,3 @@
 
 * `./math/` - это проекты, связанные с математикой, работой с числами.
 * `./markup/` - это проект, реализующий классы MarkDown разметки текста.
-
-
-_[**Text**](https://www.markdownguide.org/basic-syntax/ "Define")_
