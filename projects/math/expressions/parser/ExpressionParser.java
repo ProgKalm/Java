@@ -1,6 +1,6 @@
 package projects.math.expressions.parser;
 
-import projects.math.expressions.*;
+import projects.math.expressions.classes.*;
 import projects.math.expressions.exceptions.ConstValueException;
 import projects.math.expressions.exceptions.ExpressionCastException;
 import projects.math.expressions.exceptions.VariableNameException;
@@ -8,7 +8,22 @@ import projects.math.expressions.parser.exception.InvalidParseExpressionExceptio
 import projects.math.expressions.parser.exception.ParseInvalidException;
 import projects.math.expressions.parser.exception.ParserExpressionException;
 
+import java.math.BigDecimal;
+import java.util.Map;
+
 public class ExpressionParser extends StringParser<Expression> {
+
+    public BigDecimal evaluation(String expression) throws Exception {
+        Expression ex = parse(expression);
+        System.err.println(ex);
+        return ex.calculate();
+    }
+
+    public BigDecimal evaluation(String expression, Map<String, Number> variablesValue) throws Exception {
+        Expression ex = parse(expression);
+        System.err.println(ex);
+        return ex.calculate(variablesValue);
+    }
 
 
     @Override

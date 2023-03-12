@@ -1,6 +1,6 @@
 package projects.math.expressions.exceptions;
 
-import projects.math.expressions.Expression;
+import projects.math.expressions.classes.Expression;
 
 public class DivisionByZeroException extends ExpressionException {
 
